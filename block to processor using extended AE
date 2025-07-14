@@ -1,0 +1,21 @@
+every redstone pulse do
+input *block* from chest
+output 1 retain 1 to each slicer
+forget
+input *print* from slicer
+output to chest
+forget
+input from chest
+output 4 retain 4 *print* except *silicon* to each crystal
+output 4 retain 4 ae2:printed_silicon to each crystal
+output 4 retain 4 *redstone* to each crystal
+forget
+input *proc* except *print* from crystal
+output to sys
+end
+EVERY 200 TICKS DO
+    IF SOME crystal HAS LT 12 THEN
+        INPUT FROM crystal
+        OUTPUT TO chest
+    END
+END
