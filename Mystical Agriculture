@@ -1,0 +1,15 @@
+NAME "Mystical Agriculture"
+
+every 20 ticks do
+
+    input from chestIN
+    output *essence* to Eped
+    output except *essence*, *seed* to ped
+    output *seed_base* to altar
+
+forget
+
+    input except *seed_base* from altar
+    output to chestOUT
+
+end
