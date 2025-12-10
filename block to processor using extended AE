@@ -13,9 +13,3 @@ forget
 input *proc* except *print* from crystal
 output to sys
 end
-EVERY 200 TICKS DO
-    IF SOME crystal HAS LT 12 THEN
-        INPUT FROM crystal
-        OUTPUT TO chest
-    END
-END
